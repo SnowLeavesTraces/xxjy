@@ -15,6 +15,9 @@
 		<module>xxjy-order</module>
 		<module>xxjy-product</module>
 		<module>xxjy-ware</module>
+		<module>renren-fast</module>
+		<module>renren-generator</module>
+		<module>xxjy-common</module>
 	</modules>
 
 </project>
