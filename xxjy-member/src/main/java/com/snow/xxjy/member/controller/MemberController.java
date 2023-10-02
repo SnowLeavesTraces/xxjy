@@ -3,6 +3,7 @@ package com.snow.xxjy.member.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import com.snow.xxjy.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +30,18 @@ import com.snow.xxjy.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+
+    @Autowired
+    private CouponFeignService couponFeignService;
+
+    /**
+     * 远程调用coupon获取会员优惠券信息
+     */
+    @RequestMapping("/coupon/{id}")
+    public R getCoupon(@PathVariable("id") Long id){
+        R info = couponFeignService.info(id);
+        return R.ok(info);
+    }
 
     /**
      * 列表
