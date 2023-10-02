@@ -18,6 +18,7 @@
 		<module>renren-fast</module>
 		<module>renren-generator</module>
 		<module>xxjy-common</module>
+		<module>xxjy-gateway</module>
 	</modules>
 
 </project>

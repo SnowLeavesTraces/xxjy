@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: xxjy-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: test-gateway
+          uri: https://www.baidu.com
+          predicates:
+            - Query=url,baidu
+server:
+  port: 90
