@@ -59,10 +59,23 @@
             <version>8.0.31</version>
         </dependency>
 
-<!--        引入spring cloud alibaba的nacos-->
+<!--        引入spring cloud alibaba的nacos作为服务注册/发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+<!--        引入Nacos作为配置中心的依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+<!--        Spring Cloud 新版本默认将 Bootstrap 禁用，需要将 spring-cloud-[starter]依赖引入到工程中：-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
